@@ -1,0 +1,193 @@
+
+
+.subjects .card {
+  min-width: 0;
+}
+
+.card {
+  padding: 10px;
+  border-radius: 13px;
+}
+
+.subjects .card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.card-header {
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.subjects h3 {
+  font-family: 'Montserrat Alternates';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 23px;
+  color: var(--text-dark);      
+  margin: 0;
+}
+
+.btn-add-mini {
+  background: var(--primary);
+  border: none;
+  border-radius: 12px;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+.btn-add-mini:hover {
+  transform: scale(1.05);
+  background: var(--primary-hover);
+}
+
+.subjects .scroll-area {
+  padding-top: 5px;
+  flex: 1;
+  overflow-y: auto;
+  min-height: 0;
+  padding-right: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.subjects .scroll-area::-webkit-scrollbar {
+  width: 4px;
+}
+.subjects .scroll-area::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
+[data-theme='dark'] .subjects .scroll-area::-webkit-scrollbar-thumb {
+  background-color: rgba(255,255,255,0.2);
+}
+
+.subject-item {
+  min-height: 50px;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  border-radius: 9px;
+  padding: 10px 15px;
+  border: 3px solid rgba(98, 70, 234, 0.27); 
+  transition: 0.3s;
+}
+
+.subject-item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0px 6px 16px rgba(0, 0, 0, 0.08);
+  border: 3px solid var(--primary);
+}
+
+.subject-icon-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+}
+
+.subject-custom-icon {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.subject-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex: 1;
+  gap: 10px;
+  min-width: 0;
+}
+
+.subject-name {
+  word-wrap: break-word;
+  line-height: 1.2;
+  margin: 0;
+  text-transform: capitalize;
+  color: var(--text-dark);
+}
+
+.subject-tasks-count {
+  font-size: 14px;
+  color: var(--text-gray);
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+[data-theme='dark'] .subjects .card {
+  background: var(--card-bg);
+}
+[data-theme='dark'] .subject-item {
+  background: var(--card-bg);
+  border-color: var(--primary-light);
+}
+[data-theme='dark'] .subject-item:hover {
+  background: var(--primary-light);
+}
+
+.subject-links-preview {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+  margin-top: 4px;
+  font-size: 0.7rem;
+  color: var(--primary);
+}
+.subject-links-preview span {
+  display: inline-flex;
+  align-items: center;
+  gap: 3px;
+  background: rgba(98, 70, 234, 0.1);
+  padding: 2px 6px;
+  border-radius: 12px;
+}
+
+@media (max-width: 1000px) {
+  .subjects .card { padding: 20px; }
+  .subjects h3 { font-size: 16px; }
+  .btn-add-mini { width: 32px; height: 32px; }
+  .btn-add-mini svg { width: 18px; height: 18px; }
+  .subject-item { padding: 10px 16px; gap: 12px; }
+  .subject-name { font-size: 14px; }
+  .subject-tasks-count { font-size: 12px; }
+  .subjects .scroll-area { gap: 12px; }
+}
+
+@media (max-width: 768px) {
+  .subjects .card { padding: 16px; }
+  .subjects h3 { font-size: 18px; }
+  .subject-name { font-size: 14px; }
+}
+
+@media (max-width: 480px) {
+  .subject-item { padding: 10px; gap: 10px; }
+  .subject-info { flex-direction: column; align-items: flex-start; gap: 4px; }
+  .subject-name { font-size: 13px; white-space: normal; }
+  .subject-tasks-count { font-size: 11px; }
+  .btn-add-mini { width: 32px; height: 32px; }
+}
+
+@media (max-width: 370px) {
+  .subjects .card { height: auto; min-height: 200px; }
+  .subjects h3 { font-size: 14px; }
+  .subject-item { height: auto; padding: 12px; }
+}
+
+@media (max-width: 768px) {
+  .subjects-header { margin-top: 70px; }
+}
+@media (min-width: 769px) and (max-width: 1858px) {
+  .subjects-header { margin-top: 70px; }
+}

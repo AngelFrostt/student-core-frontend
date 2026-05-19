@@ -1,0 +1,140 @@
+
+.dashboard-container {
+  display: flex;
+  min-height: 100vh;
+   background: var(--bg-light);  
+  background-repeat: repeat;
+  background-attachment: fixed;
+  transition: background 0.2s;
+}
+
+@media (min-width: 1829px) {
+  .dashboard-main {
+    flex-grow: 1;
+    padding: 40px 40px 40px 260px;
+    display: flex;
+    justify-content: center;
+    box-sizing: border-box;
+  }
+}
+
+@media (max-width: 1828px) and (min-width: 769px) {
+  .dashboard-container {
+    flex-direction: column;
+  }
+  .dashboard-main {
+    padding: 80px 30px 40px;
+    display: flex;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .dashboard-container {
+    flex-direction: column;
+  }
+  .dashboard-main {
+    padding-top: 100px;
+  
+  }
+}
+
+.bento-grid {
+  max-width: 1400px;
+  width: 100%;
+  display: grid;
+  gap: 25px;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-areas:
+    "analytics analytics focus"
+    "calendar efficiency subjects";
+}
+
+.area-analytics   { grid-area: analytics; }
+.area-focus       { grid-area: focus; }
+.area-calendar    { grid-area: calendar; }
+.area-efficiency  { grid-area: efficiency; }
+.area-subjects    { grid-area: subjects; }
+
+.bento-grid > section {
+  background: #F7F8FD;
+  border-radius: 13px;
+ box-shadow: 0px 3px 10px 1px rgb(0 0 0 / 31%);
+  transition: all 0.2s;
+  display: flex;
+  flex-direction: column;
+
+  border: 3px solid rgba(98, 70, 234, 0.27);
+}
+
+.reset-filter-btn {
+  background: #5d87ff;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  padding: 4px 12px;
+  font-size: 0.8rem;
+  cursor: pointer;
+  margin-bottom: 10px;
+  transition: 0.2s;
+}
+.reset-filter-btn:hover {
+  background: #4a6ee0;
+}
+
+
+@media (max-width: 1100px) and (min-width: 770px) {
+  .bento-grid {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas:
+      "analytics analytics"
+      "focus calendar"
+      "efficiency subjects";
+    gap: 20px;
+  }
+  .bento-grid > section {
+    border-radius: 24px;
+    padding: 20px;
+  }
+}
+
+@media (max-width: 769px) and (min-width: 480px) {
+  .bento-grid {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas:
+      "analytics analytics"
+      "focus calendar"
+      "efficiency subjects";
+    gap: 16px;
+  }
+  .bento-grid > section {
+    border-radius: 20px;
+    padding: 5px;
+  }
+}
+
+@media (max-width: 640px) {
+  .bento-grid {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "analytics"
+      "focus"
+      "calendar"
+      "efficiency"
+      "subjects";
+    gap: 16px;
+  }
+  .bento-grid > section {
+    border-radius: 20px;
+    padding: 16px;
+  }
+}
+
+
+.dark-theme .dashboard-main {
+  background: #12121a;
+}
+.dark-theme .bento-grid > section {
+  background: #1e1e2f;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}

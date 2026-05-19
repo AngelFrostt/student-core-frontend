@@ -1,0 +1,108 @@
+.analytics-card .card {
+  backdrop-filter: blur(20px);
+  border-radius: 30px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.analytics-title {
+  font-size: 1.2rem;
+  margin: 0 0 16px 0;
+  color: var(--text-dark);
+  text-align: center;
+}
+
+.analytics-two-columns {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.weekly-bars {
+  flex: 2;
+  min-width: 200px;
+}
+
+.bars-label {
+  text-align: center;
+  font-size: 0.7rem;
+  color: var(--text-gray);
+  margin-top: 8px;
+}
+
+.right-stats {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  min-width: 150px;
+}
+
+.monthly-block,
+.progress-block {
+  background: rgba(var(--primary-rgb), 0.1);
+  border-radius: 24px;
+  padding: 16px;
+  text-align: center;
+}
+
+.monthly-block h4,
+.progress-block h4 {
+  font-size: 0.9rem;
+  margin: 0 0 12px 0;
+  color: var(--text-dark);
+}
+
+.progress-ring {
+  width: 100px;
+  margin: 0 auto;
+}
+
+.monthly-message {
+  font-size: 0.75rem;
+  margin-top: 8px;
+  color: var(--text-gray);
+}
+
+.progress-stat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.stat-label {
+  font-size: 0.75rem;
+  color: var(--primary);
+}
+
+.stat-value {
+  font-size: 2rem;
+  font-weight: bold;
+  color: var(--text-dark);
+}
+
+.progress-block small {
+  font-size: 0.65rem;
+  color: var(--text-gray);
+}
+
+.analytics-tooltip {
+  background: var(--card-bg);
+  padding: 6px 12px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  font-size: 0.7rem;
+  color: var(--text-dark);
+  border: 1px solid var(--border-light);
+}
+
+@media (max-width: 860px) {
+  .analytics-two-columns {
+    flex-direction: column;
+  }
+  .right-stats {
+    flex-direction: row;
+    justify-content: center;
+  }
+}

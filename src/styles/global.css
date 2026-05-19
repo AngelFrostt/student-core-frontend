@@ -1,0 +1,127 @@
+:root {
+  
+  --primary: #6246ea;         
+  --primary-hover: #4a2fc9;   
+  --primary-light: #d1d1e9;    
+  --primary-rgb: 98, 70, 234;   
+  
+  --bg-light: #eef1fc;          
+  --card-bg: #fffffe;          
+  --text-dark: #2b2c34;         
+  --text-gray: #6b6c7e;         
+  
+  --success: #48bb78;           
+  --warning: #ed8936;           
+  --danger: #e45858;            
+  --danger-dark: #c53030;
+  
+  --border-light: #e2e8f0;
+  
+  --font-main: 'Montserrat', sans-serif;
+  --font-accent: 'Montserrat Alternates', sans-serif;
+
+
+  --danger-rgb: 228, 88, 88;
+  --warning-rgb: 237, 137, 54;
+  --success-rgb: 72, 187, 120;
+  
+}
+
+
+[data-theme='dark'] {
+  --primary-rgb: 127, 90, 240;
+
+  --bg-light: #16161a;       
+  --card-bg: #1e1e2f;       
+  --text-dark: #fffffe;     
+  --text-gray: #94a1b2;      
+  
+  --primary: #7f5af0;        
+  --primary-hover: #6b47d4;  
+  --primary-light: #29294e;  
+  
+  --success: #2cb67d;       
+  --warning: #ffb347;        
+  --danger: #e45858;         
+  
+  --border-light: #2d2d35;
+  
+  
+  --white: #16161a;
+
+
+  --danger: #e45858;
+  --danger-rgb: 228, 88, 88;
+  --warning: #ffb347;
+  --warning-rgb: 255, 179, 71;
+  --success: #2cb67d;
+  --success-rgb: 44, 182, 125;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  background-color: var(--bg-light);
+  color: var(--text-dark);
+  font-family: var(--font-main);
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+h1, h2, .auth-title {
+  font-family: var(--font-accent);
+  font-weight: 700;
+}
+
+h3 {
+  font-family: 'Montserrat Alternates';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  color: var(--text-dark);
+  margin: 0;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  outline: none;
+}
+
+input {
+  outline: none;
+}
+
+input::-ms-reveal,
+input::-ms-clear,
+input::-webkit-contacts-auto-fill-button,
+input::-webkit-credentials-auto-fill-button,
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  display: none;
+}
+
+
+.focus-card {
+  background: var(--card-bg);
+  border-radius: 24px;
+  padding: 24px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+}
+
+.task-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  border-radius: 15px;
+  margin-bottom: 12px;
+  color: white;
+}
+
+.task-red { background: var(--danger); }
+.task-yellow { background: var(--warning); }
+.task-green { background: var(--success); }
+
+a {
+  text-decoration: none;
+}

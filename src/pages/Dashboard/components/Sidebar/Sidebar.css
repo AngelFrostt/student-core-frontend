@@ -1,0 +1,125 @@
+
+
+.sidebar {
+  width: 260px;
+  height: 100vh;
+  background-color: var(--primary);
+  position: fixed;
+  left: 0;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  padding: 40px 25px;
+  color: white;
+  z-index: 1000;
+  transition: background-color 0.2s ease;
+}
+
+.sidebar-top {
+  flex: 1;
+}
+
+.logo {
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 50px;
+  color: white;
+}
+
+.menu-item {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 12px 0;
+  opacity: 0.8;
+  cursor: pointer;
+  color: white;
+  transition: 0.2s;
+}
+
+.menu-item.active {
+  opacity: 1;
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 12px;
+  padding: 12px 15px;
+  margin-left: -15px;
+  /* width: calc(100% + 15px); */
+}
+
+.sidebar-bottom {
+  margin: 0px 0 100px 0px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.theme-toggle,
+.logout-btn {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  cursor: pointer;
+  opacity: 0.8;
+  text-align: left;
+  color: white;
+  background: none;
+  border: none;
+  width: 100%;           
+  justify-content: flex-start; 
+}
+
+.theme-toggle:hover,
+.logout-btn:hover {
+  opacity: 1;
+}
+
+
+.icon-animate {
+  animation: themeIconSpin 0.3s ease-in-out;
+}
+
+@keyframes themeIconSpin {
+  0% { transform: rotate(0deg) scale(1); }
+  50% { transform: rotate(15deg) scale(1.2); }
+  100% { transform: rotate(0deg) scale(1); }
+}
+
+
+[data-theme='dark'] .sidebar {
+  background-color: var(--card-bg);
+}
+
+[data-theme='dark'] .sidebar .logo,
+[data-theme='dark'] .sidebar .menu-item,
+[data-theme='dark'] .sidebar .theme-toggle,
+[data-theme='dark'] .sidebar .logout-btn {
+  color: var(--text-dark);
+}
+
+[data-theme='dark'] .menu-item.active {
+  background: rgb(127 90 240);
+  color: var(--text-dark);
+}
+
+
+
+.sidebar .sidebar-bottom .theme-toggle {
+  width: 100% !important;
+  justify-content: flex-start !important;
+  padding: 8px 0 !important;      
+  border-radius: 0 !important;    
+  background: transparent !important;
+  color: white !important;        
+}
+
+
+[data-theme='dark'] .sidebar .sidebar-bottom .theme-toggle {
+  color: var(--text-dark) !important;
+}
+
+
+.sidebar-bottom {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
